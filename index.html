@@ -1,24 +1,189 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jeelan Computer Services</title>
     <link rel="icon" type="image/x-icon" href="https://github.com/JeelanPro/JeelanPro.github.io/raw/main/icons8-j-67.ico">
+    <style>
+        .sidenav {
+            display: block;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            /*box-shadow: 0px 0px 50px 15px gray;*/
+        }
+
+            .sidenav a {
+                display: block;
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                transition: 0.3s;
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
+
+                .sidenav a:hover {
+                    box-shadow: 0px 0px 50px 0px gray;
+                }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        .MenuBtn {
+            display: block;
+            position: fixed;
+            height: 7%;
+            width: 3%;
+            top: 1%;
+            left: 1%;
+            background-image: url("download1.png");
+            background-repeat: round;
+            cursor: pointer;
+            animation: none;
+        }
+
+            .MenuBtn.clicked {
+                animation: rotate 0.5s linear;
+            }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        .tabcontent {
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
+        }
+
+        /* Go from zero to full opacity */
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-    <h1 style="text-align:center">Welcome to Jeelan Teams on Summer</h1>
-    <h3 style="text-align:center">----------------------News----------------------</h3>
-    <p>Updating...</p>
-    <p>1. Only Jeelan News: <a href="https://docs.google.com/presentation/d/1_CZu2H_CbkFBNCvPwcAsVMiizGfSji83hqF1Ou4p13I/edit?usp=sharing">Click here</a> <p/>
-    <p>2. Jeelan Team News: <a href="https://docs.google.com/presentation/d/17rUecEUw8wIobcii0de-VCxFLaADEz1YyBKDc_MnlcY/edit?usp=sharing">Click here</a> <p/>
-    <p>2. Play with Jeelan Team: <a href="https://docs.google.com/presentation/d/1DrPWWBAg23y3K9CMDP5y3JFQ---Iyy9YXzKO3eTgRxI/edit?usp=sharing">Click here</a> <p/>
+    <div id="mySidenav" class="sidenav">
+        <a class="tablink" onclick="openPage('a', this, 'red')" id="defaultOpen">Home</a>
+        <a class="tablink" onclick="openPage('b', this, 'green')">About</a>
+        <a class="tablink" onclick="openPage('c', this, 'green')">Jeelan News</a>
+        <a class="tablink" onclick="openPage('d', this, 'blue')">Main News</a>
+        <a class="tablink" onclick="openPage('e', this, 'orange')">Play</a>
+    </div>
+
+    <div id="main">
+        <div id="a" class="tabcontent">
+            <h3>Home</h3>
+            <pre>
+Hi Everyone! My name is Jeelan.
+I made this website for development.
+I am updating this website for development,
+so new updates coming soon or later :)
+            </pre>
+        </div>
+
+        <div id="b" class="tabcontent">
+            <h1>Abouts</h1>
+            <pre>
+Hi, I am Jeelan.
+I am a programmer, I am trying to update the website too more powerful and strong.
+There is some updates it's coming soon or later and new Video Coming soon.
+To make this website I use <a href="https://www.w3schools.com/howto/default.asp">W3Schools How to</a>.
+Thank you!
+            </pre>
+        </div>
+
+        <div id="c" class="tabcontent">
+            <h1 style="margin-bottom: 20px;">Jeelan News</h1>
+            <iframe style="box-shadow: 0px 0px 50px -15px gray;border-radius: 10px;" src="https://docs.google.com/presentation/d/e/2PACX-1vQeiD10DcT9iIqsB4Kx7ukPXNCSZSIKU7I7iv-vo3w2BlmEc0DqemwK4uU8SsWJX166d7ZIJNvg8qC7/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+        <div id="d" class="tabcontent">
+            <h1 style="margin-bottom: 20px;">Main News</h1>
+            <iframe style="box-shadow: 0px 0px 50px -15px gray;border-radius: 10px;" src="https://docs.google.com/presentation/d/e/2PACX-1vSUM7xX8Hyf-wZjPMx6hX9BIFHmzCI1BKOpJo5E2WgRHYf5umkp9ltQNEpbOIINLZRDdEwZJFlQVtyu/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+        <div id="e" class="tabcontent">
+            <h1 style="margin-bottom: 20px;">Play</h1>
+            <iframe style="box-shadow: 0px 0px 50px -15px gray;border-radius: 10px;" src="https://docs.google.com/presentation/d/1DrPWWBAg23y3K9CMDP5y3JFQ---Iyy9YXzKO3eTgRxI/edit#slide=id.g252ec8e2870_0_0" frameborder="0" width="960" height="569"></iframe>
+        </div>
+    </div>
     
-    <h3>Videos<h3/>
-    <video width="420" height="240" controls>
-        <source src="https://github.com/JeelanPro/JeelanPro.github.io/raw/main/Jeelan%20Team.mp4" 
-            type=video/mp4> 
-    </video>
+    <div class="MenuBtn" onclick="this.classList.add('clicked'); setTimeout(function(){ this.classList.remove('clicked'); }.bind(this), 500); openNav();"></div>
+
+    <script>
+        var Menubar = "1";
+        function openNav() {
+            if (Menubar === "1") {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("mySidenav").style.boxShadow = "0px 0px 50px -15px gray";
+                Menubar = "0";
+            } else {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("mySidenav").style.boxShadow = "none";
+                Menubar = "1";
+            }
+        }
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+             elmnt.style.backgroundColor = "#AAAAAA";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        if (Menubar === "1") {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("mySidenav").style.boxShadow = "0px 0px 50px -15px gray";
+            Menubar = "0";
+        } else {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("mySidenav").style.boxShadow = "none";
+            Menubar = "1";
+        }
+    </script>
+
 </body>
 </html>
-
